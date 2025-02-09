@@ -2,7 +2,7 @@
 FROM alpine:latest
 
 # Install python and pip
-RUN apk add --no-cache --update python3 py3-pip bash
+RUN apk add --no-cache --update python3 py3-pip bash gcc musl-dev libffi-dev
 ADD ./webapp/requirements.txt /tmp/requirements.txt
 
 RUN python3 -m venv /opt/venv
