@@ -6,7 +6,7 @@ RUN apk add --no-cache --update python3 py3-pip bash gcc musl-dev libffi-dev
 ADD ./webapp/requirements.txt /tmp/requirements.txt
 
 RUN python3 -m venv /opt/venv
-
+RUN . /opt/venv/bin/activate
 # Install dependencies
 RUN pip3 install --no-cache-dir -r /tmp/requirements.txt
 
