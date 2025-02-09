@@ -5,9 +5,6 @@ FROM alpine:latest
 RUN apk add --no-cache --update python3 py3-pip bash
 ADD ./webapp/requirements.txt /tmp/requirements.txt
 
-#check add
-ls /tmp
-
 # Install dependencies
 RUN pip3 install --no-cache-dir -r /tmp/requirements.txt
 
