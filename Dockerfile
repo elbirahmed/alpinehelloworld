@@ -5,7 +5,7 @@ FROM alpine:latest
 RUN apk add --no-cache --update python3 py3-pip bash
 ADD ./webapp/requirements.txt /tmp/requirements.txt
 
-RUN python3 -m venv /tmp/venv /tmp/venv/bin/activate
+RUN python3 -m venv /opt/venv
 
 # Install dependencies
 RUN pip3 install --no-cache-dir -r /tmp/requirements.txt
